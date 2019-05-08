@@ -10,6 +10,7 @@ body{
   justify-content: center;
   
 }*/
+
 .types{
   display: flex;
   align-items: center;
@@ -23,9 +24,9 @@ flex-direction: column;
 align-items: center;
 }
 .types .typeItem{
-  margin: 10px 10px;
-  width: 90px;
-  height: 90px;
+  margin: 15px 0 13px;
+  width: 72px;
+  height: 72px;
   border-radius: 10px; 
   background: gray;
 }
@@ -35,12 +36,12 @@ align-items: center;
   opacity: 0;
 }
 .types .typeItem div{
-  width: 90px;
-  height: 90px;
+  width: 72px;
+  height: 72px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 3px solid white;
+  border: 3px solid transparent;
   box-sizing: border-box;
   border-radius: 10px;
   margin: 0 0;
@@ -50,8 +51,7 @@ align-items: center;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 -moz-box-sizing: border-box;    /* Firefox, other Gecko */
 box-sizing: border-box;         /* Opera/IE 8+ */
-  padding-top: 40px;
-  height: 90px;
+  height: inherit;
   font-family: arial;
   width: inherit;
   text-align: center;
@@ -77,4 +77,18 @@ box-sizing: border-box;         /* Opera/IE 8+ */
 }*/
 .types .typeItem > input[type="radio"]:checked ~ div label{
   color: rgb(93, 120, 255);
+}
+.flex-direction-column{
+  flex-direction: column;
+}
+.dashboard--title{
+  font-size: 40px;
+  font-weight: initial;
+  margin-bottom: 50px
+}
+.radio--title{
+  margin: 25px 0;
+}
+.btn-block{
+  margin-top: 33px;
 }
