@@ -88,6 +88,11 @@
       width: 100%;
     }
 
+    .sidebar-link{
+        display: flex;
+        flex-direction: column;
+    }
+
     .app-body {
       width: 1 1 auto;
     }
@@ -101,39 +106,94 @@
       display: flex;
       flex: 0 0 330px;
     }
+    .nav-tabs .nav-link{
+        padding: 1rem;
+    }
+    .nav-tabs .nav-link:hover:not(.disabled){
+        border-color: transparent;
+        color: #6e7687;
+        background: #f4f4f4;
+    }
+    .nav-tabs .nav-link:hover{
+        border-color: transparent;
+        color: #6e7687;
+        background: #f4f4f4;
+    }
+    .nav-tabs .nav-item i{
+        font-size: 40px;
+        width: auto;
+    }
+    .nav-tabs .nav-item span{
+        font-size: 30px;
+        width: auto;
+        margin-right: 0.5em;
+    }
+    .toggler{
+        margin-left: auto;
+        font-size: 20px !important;
+    }
+    .manage-modules--title{
+        padding: 1rem;
+        width: inherit;
+        font-size: 19px;
+        margin: 0;
+        background: #e4e4e4;
+        color: #fff;
+    }
   </style>
 </head>
 
 <body>
   <section class="app app-dashboard">
-    <div class="app-navbar">
+    <!-- <div class="app-navbar">
       Navbar
-    </div>
+    </div> -->
     <div class="app-layout">
       <div class="app-side">
         <div class="app-sidemenu">
           <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
             <li class="nav-item">
-              <a href="" class="nav-link active"><i class="fe fe-menu"></i></a>
+              <a href="" class="nav-link sidebar-link"><i class="fe fe-menu"></i></a>
             </li>
             <li class="nav-item dropdown">
-              <a href="" class="nav-link"><i class="fe fe-check-square"></i> Forms</a>
+              <a href="" class="nav-link sidebar-link"><i class="fe fe-check-square"></i> Style</a>
             </li>
             <li class="nav-item">
-              <a href="" class="nav-link"><i class="fe fe-image"></i> Gallery</a>
+              <a href="" class="nav-link sidebar-link"><i class="fe fe-image"></i> Content</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link sidebar-link"><i class="fe fe-image"></i> Publish</a>
             </li>
           </ul>
         </div>
         <div class="app-secondarymenu">
           <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
-            <li class="nav-item">
-              <a href="" class="nav-link active"><i class="fe fe-home"></i> Home</a>
+            <li class="nav-item sidebar-collapse">
+              <p class="manage-modules--title">Manage Modules</p>
             </li>
-            <li class="nav-item dropdown">
-              <a href="" class="nav-link"><i class="fe fe-check-square"></i> Forms</a>
+            <li class="nav-item dropdown sidebar-collapse">
+              <a href="" class="nav-link"><span class="fe fe-book-open"></span> Catalogue<span class="fe fe-menu toggler"></span></a>
             </li>
-            <li class="nav-item">
-              <a href="" class="nav-link"><i class="fe fe-image"></i> Gallery</a>
+            <li class="nav-item sidebar-collapse">
+              <a href="" class="nav-link"><span class="fe fe-search"></span> Search<span class="fe fe-menu toggler"></span></a>
+            </li>
+            <li class="nav-item sidebar-collapse">
+              <a href="" class="nav-link"><span class="fe fe-image"></span> About<span class="fe fe-menu toggler"></span></a>
+            </li>
+            <li class="nav-item sidebar-collapse">
+              <a href="" class="nav-link"><span class="fe fe-image"></span> Portofolio<span class="fe fe-menu toggler"></span></a>
+            </li>
+            <li class="nav-item sidebar-collapse">
+              <a href="" class="nav-link"><span class="fe fe-image"></span> Our Team<span class="fe fe-menu toggler"></span></a>
+            </li>
+            <li class="nav-item sidebar-collapse">
+              <a href="" class="nav-link"><span class="fe fe-image"></span> Contact<span class="fe fe-menu toggler"></span></a>
+            </li>
+            <li class="nav-item sidebar-collapse">
+              <a href="" class="nav-link"><span class="fe fe-image"></span> Our Story<span class="fe fe-menu toggler"></span></a>
+            </li>
+            <li class="nav-item sidebar-collapse">
+              <a href="" class="nav-link"><span class="fe fe-image"></span> Blog<span class="fe fe-menu toggler"></span></a>
             </li>
           </ul>
         </div>
