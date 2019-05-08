@@ -28,18 +28,18 @@
     });
   </script>
   <!-- Dashboard Core -->
-  <link href="./tabler/assets/css/dashboard.css" rel="stylesheet" />
-  <script src="./tabler/assets/js/dashboard.js"></script>
+  <link href="./assets/css/dashboard.css" rel="stylesheet" />
+  <script src="./assets/js/dashboard.js"></script>
   <!-- c3.js Charts Plugin -->
-  <link href="./tabler/assets/plugins/charts-c3/plugin.css" rel="stylesheet" />
-  <script src="./tabler/assets/plugins/charts-c3/plugin.js"></script>
+  <link href="./assets/plugins/charts-c3/plugin.css" rel="stylesheet" />
+  <script src="./assets/plugins/charts-c3/plugin.js"></script>
   <!-- Google Maps Plugin -->
-  <link href="./tabler/assets/plugins/maps-google/plugin.css" rel="stylesheet" />
-  <script src="./tabler/assets/plugins/maps-google/plugin.js"></script>
+  <link href="./assets/plugins/maps-google/plugin.css" rel="stylesheet" />
+  <script src="./assets/plugins/maps-google/plugin.js"></script>
   <!-- Input Mask Plugin -->
-  <script src="./tabler/assets/plugins/input-mask/plugin.js"></script>
+  <script src="./assets/plugins/input-mask/plugin.js"></script>
   <!-- Datatables Plugin -->
-  <script src="./tabler/assets/plugins/datatables/plugin.js"></script>
+  <script src="./assets/plugins/datatables/plugin.js"></script>
 
   <link rel="stylesheet" type="text/css" href="css/dashboard.css">
   <style>
@@ -96,6 +96,7 @@
       width: 80%;
       margin: 50px auto;
     }
+
     .app-side {
       display: flex;
       flex: 0 0 330px;
@@ -139,6 +140,45 @@
       </div>
       <div class="app-body">
         <div class="app-body__container">
+          <ul class="nav nav-tabs process-model more-icon-preocess" role="tablist">
+            <li role="presentation" class="active"><a href="#step-1" aria-controls="step-1" role="tab"
+                data-toggle="tab"><i class="fa fa-search" aria-hidden="true"></i>
+                <p>step-1</p>
+              </a></li>
+            <li role="presentation"><a href="#step-2" aria-controls="step-2" role="tab" data-toggle="tab"><i
+                  class="fa fa-send-o" aria-hidden="true"></i>
+                <p>step-2</p>
+              </a></li>
+            <li role="presentation"><a href="#step-3" aria-controls="step-3" role="tab" data-toggle="tab"><i
+                  class="fa fa-qrcode" aria-hidden="true"></i>
+                <p>step-3</p>
+              </a></li>
+          </ul>
+          <!-- end design process steps-->
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="step-1">
+              <div class="design-process-content">
+                <h3 class="semi-bold">step-1</h3>
+                <p>1. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincid unt ut
+                  laoreet dolore magna aliquam erat volutpat</p>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="step-2">
+              <div class="design-process-content">
+                <h3 class="semi-bold">step-2</h3>
+                <p>2. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincid unt ut
+                  laoreet dolore magna aliquam erat volutpat</p>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="step-3">
+              <div class="design-process-content">
+                <h3 class="semi-bold">step-3</h3>
+                <p>3. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincid unt ut
+                  laoreet dolore magna aliquam erat volutpat</p>
+              </div>
+            </div>
+          </div>
           <form class="card">
             <div class="card-body">
               <h3 class="card-title">Edit Profile</h3>
@@ -146,7 +186,8 @@
                 <div class="col-md-5">
                   <div class="form-group">
                     <label class="form-label">Company</label>
-                    <input type="text" class="form-control" disabled="" placeholder="Company" value="Creative Code Inc.">
+                    <input type="text" class="form-control" disabled="" placeholder="Company"
+                      value="Creative Code Inc.">
                   </div>
                 </div>
                 <div class="col-sm-6 col-md-3">
@@ -218,6 +259,21 @@
       </div>
     </div>
   </section>
+
+  <script>
+    // script for tab steps
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+
+      var href = $(e.target).attr('href');
+      var $curr = $(".process-model  a[href='" + href + "']").parent();
+
+      $('.process-model li').removeClass();
+
+      $curr.addClass("active");
+      $curr.prevAll().addClass("visited");
+    });
+    // end  script for tab steps
+  </script>
 </body>
 
 </html>
