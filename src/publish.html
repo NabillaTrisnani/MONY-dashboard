@@ -43,7 +43,7 @@
 
   <link rel="stylesheet" type="text/css" href="css/dashboard.css">
   <style>
-    body {
+     body {
       background-color: #fafafa;
     }
 
@@ -83,6 +83,10 @@
       margin: 0;
     }
 
+    p{
+      margin: 0;
+    }
+
     .nav-link,
     .nav-item {
       width: 100%;
@@ -105,6 +109,9 @@
     .app-side {
       display: flex;
       flex: 0 0 330px;
+    }
+    .nav-tabs{
+      border: none;
     }
     .nav-tabs .nav-link{
         padding: 1rem;
@@ -130,18 +137,16 @@
     .nav-tabs .nav-item span{
         width: auto;
     }
-    .toggler{
-        margin-left: auto;
-        font-size: 20px !important;
+    .nav-tabs--link{
+      margin: auto auto auto 0;
+    display: flex;
+    font-size: 28px;
     }
-    .manage-modules--title{
-        padding: 1rem;
-        width: inherit;
-        font-size: 19px;
-        margin: 0;
-        background: #e4e4e4;
-        color: #fff;
+
+    .tab-pane{
+      margin-top: 70px;
     }
+
   </style>
 </head>
 
@@ -168,7 +173,7 @@
             </li>
           </ul>
         </div>
-        <div class="app-secondarymenu">
+        <!-- <div class="app-secondarymenu">
           <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
             <li class="nav-item sidebar-collapse">
               <p class="manage-modules--title">Manage Modules</p>
@@ -198,130 +203,121 @@
               <a href="" class="nav-link"><span class="fe fe-image"></span> Blog<span class="fe fe-menu toggler"></span></a>
             </li>
           </ul>
-        </div>
+        </div> -->
       </div>
       <div class="app-body">
         <div class="app-body__container">
-          <ul class="nav nav-tabs process-model more-icon-preocess" role="tablist">
-            <li role="presentation" class="active"><a href="#step-1" aria-controls="step-1" role="tab"
-                data-toggle="tab"><i class="fa fa-search" aria-hidden="true"></i>
-                <p>step-1</p>
-              </a></li>
-            <li role="presentation"><a href="#step-2" aria-controls="step-2" role="tab" data-toggle="tab"><i
-                  class="fa fa-send-o" aria-hidden="true"></i>
-                <p>step-2</p>
-              </a></li>
-            <li role="presentation"><a href="#step-3" aria-controls="step-3" role="tab" data-toggle="tab"><i
-                  class="fa fa-qrcode" aria-hidden="true"></i>
-                <p>step-3</p>
-              </a></li>
-          </ul>
+        	<div class="col-xl-6">
+	          <ul class="nav nav-tabs process-model more-icon-preocess" role="tablist">
+	            <li role="presentation" class="nav-tabs--link active"><a href="#step-1" aria-controls="step-1" role="tab"
+	                data-toggle="tab"><i aria-hidden="true"></i>
+	                <p>App Detail</p>
+	              </a></li>
+	            <li class="nav-tabs--link"><i class="fe fe-minus" aria-hidden="true"></i>
+	              </li>
+	            <li role="presentation" class="nav-tabs--link"><a href="#step-2" aria-controls="step-2" role="tab" data-toggle="tab"><i
+	                  aria-hidden="true"></i>
+	                <p>Payment</p>
+	              </a></li>
+	          </ul>
+        	</div>
           <!-- end design process steps-->
           <!-- Tab panes -->
           <div class="tab-content">
             <div role="tabpanel" class="tab-pane active" id="step-1">
               <div class="design-process-content">
-                <h3 class="semi-bold">step-1</h3>
-                <p>1. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincid unt ut
-                  laoreet dolore magna aliquam erat volutpat</p>
+                <h1 class="text-center">Publish Aplikasimu Sekarang</h1>
+                <p class="text-center">Tolong Isi Form Detail Terlebih Dahulu</p>
+                <form class="card">
+                  <div class="card-body">
+                    <h3 class="card-title">Edit Profile</h3>
+                    <div class="row">
+                      <div class="col-md-5">
+                        <div class="form-group">
+                          <label class="form-label">Company</label>
+                          <input type="text" class="form-control" disabled="" placeholder="Company"
+                            value="Creative Code Inc.">
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-3">
+                        <div class="form-group">
+                          <label class="form-label">Username</label>
+                          <input type="text" class="form-control" placeholder="Username" value="michael23">
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4">
+                        <div class="form-group">
+                          <label class="form-label">Email address</label>
+                          <input type="email" class="form-control" placeholder="Email">
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-6">
+                        <div class="form-group">
+                          <label class="form-label">First Name</label>
+                          <input type="text" class="form-control" placeholder="Company" value="Chet">
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-6">
+                        <div class="form-group">
+                          <label class="form-label">Last Name</label>
+                          <input type="text" class="form-control" placeholder="Last Name" value="Faker">
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="form-label">Address</label>
+                          <input type="text" class="form-control" placeholder="Home Address" value="Melbourne, Australia">
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4">
+                        <div class="form-group">
+                          <label class="form-label">City</label>
+                          <input type="text" class="form-control" placeholder="City" value="Melbourne">
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-3">
+                        <div class="form-group">
+                          <label class="form-label">Postal Code</label>
+                          <input type="number" class="form-control" placeholder="ZIP Code">
+                        </div>
+                      </div>
+                      <div class="col-md-5">
+                        <div class="form-group">
+                          <label class="form-label">Country</label>
+                          <select class="form-control custom-select">
+                            <option value="">Germany</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group mb-0">
+                          <label class="form-label">About Me</label>
+                          <textarea rows="5" class="form-control" placeholder="Here can be your description" value="Mike">Oh so, your weak rhyme
+        You doubt I'll bother, reading into it
+        I'll probably won't, left to my own devices
+        But that's the difference in our opinions.</textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer text-right">
+                    <button type="submit" class="btn btn-primary">Update Profile</button>
+                  </div>
+                </form>
               </div>
             </div>
             <div role="tabpanel" class="tab-pane" id="step-2">
               <div class="design-process-content">
-                <h3 class="semi-bold">step-2</h3>
-                <p>2. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincid unt ut
-                  laoreet dolore magna aliquam erat volutpat</p>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane" id="step-3">
-              <div class="design-process-content">
-                <h3 class="semi-bold">step-3</h3>
-                <p>3. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincid unt ut
-                  laoreet dolore magna aliquam erat volutpat</p>
               </div>
             </div>
           </div>
-          <form class="card">
-            <div class="card-body">
-              <h3 class="card-title">Edit Profile</h3>
-              <div class="row">
-                <div class="col-md-5">
-                  <div class="form-group">
-                    <label class="form-label">Company</label>
-                    <input type="text" class="form-control" disabled="" placeholder="Company"
-                      value="Creative Code Inc.">
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                  <div class="form-group">
-                    <label class="form-label">Username</label>
-                    <input type="text" class="form-control" placeholder="Username" value="michael23">
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                  <div class="form-group">
-                    <label class="form-label">Email address</label>
-                    <input type="email" class="form-control" placeholder="Email">
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-6">
-                  <div class="form-group">
-                    <label class="form-label">First Name</label>
-                    <input type="text" class="form-control" placeholder="Company" value="Chet">
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-6">
-                  <div class="form-group">
-                    <label class="form-label">Last Name</label>
-                    <input type="text" class="form-control" placeholder="Last Name" value="Faker">
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <label class="form-label">Address</label>
-                    <input type="text" class="form-control" placeholder="Home Address" value="Melbourne, Australia">
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                  <div class="form-group">
-                    <label class="form-label">City</label>
-                    <input type="text" class="form-control" placeholder="City" value="Melbourne">
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                  <div class="form-group">
-                    <label class="form-label">Postal Code</label>
-                    <input type="number" class="form-control" placeholder="ZIP Code">
-                  </div>
-                </div>
-                <div class="col-md-5">
-                  <div class="form-group">
-                    <label class="form-label">Country</label>
-                    <select class="form-control custom-select">
-                      <option value="">Germany</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="form-group mb-0">
-                    <label class="form-label">About Me</label>
-                    <textarea rows="5" class="form-control" placeholder="Here can be your description" value="Mike">Oh so, your weak rhyme
-  You doubt I'll bother, reading into it
-  I'll probably won't, left to my own devices
-  But that's the difference in our opinions.</textarea>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card-footer text-right">
-              <button type="submit" class="btn btn-primary">Update Profile</button>
-            </div>
-          </form>
         </div>
       </div>
     </div>
   </section>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <!-- <script src="https://opoloo.github.io/jquery_upload_preview/assets/js/jquery.uploadPreview.min.js"></script> -->
   <script>
     // script for tab steps
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
@@ -329,7 +325,6 @@
       var href = $(e.target).attr('href');
       var $curr = $(".process-model  a[href='" + href + "']").parent();
 
-      $('.process-model li').removeClass();
 
       $curr.addClass("active");
       $curr.prevAll().addClass("visited");
