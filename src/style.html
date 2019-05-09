@@ -46,7 +46,9 @@
     body {
       background-color: #fafafa;
     }
-
+    p{
+    	margin: 0;
+    }
     .app-layout {
       display: flex;
       min-height: 100vh;
@@ -94,7 +96,7 @@
     }
 
     .app-body {
-      width: 1 1 auto;
+      flex: 1 1 auto;
     }
 
     .app-body__container {
@@ -106,18 +108,17 @@
       display: flex;
       flex: 0 0 330px;
     }
+    .nav-tabs{
+    	border: none;
+    }
     .nav-tabs .nav-link{
         padding: 1rem;
     }
     .nav-tabs .nav-link:hover:not(.disabled){
         border-color: transparent;
-        color: #6e7687;
-        background: #f4f4f4;
     }
     .nav-tabs .nav-link:hover{
         border-color: transparent;
-        color: #6e7687;
-        background: #f4f4f4;
     }
     .nav-tabs .nav-item i{
         font-size: 24px;
@@ -134,6 +135,14 @@
         margin-left: auto;
         font-size: 20px !important;
     }
+    .nav-tabs--title{
+    	font-size: 28px;
+    }
+    .nav-tabs--link{
+    	margin: auto auto auto 0;
+		display: flex;
+		font-size: 28px;
+    }
     .manage-modules--title{
         padding: 1rem;
         width: inherit;
@@ -147,7 +156,7 @@
     	background-color: #e8e8e8;
     	width: 145px;
 		height: 227px;
-		margin-bottom: 32px;
+		margin: 16px 20px;
     }
 
     /*image preview*/
@@ -158,6 +167,7 @@
       width: 248px;
       background-color: #eeeeee;
       color: #ecf0f1;
+      margin: 135px auto;
     }
     #image-preview  input, #image-splashpreview input {
       line-height: 200px;
@@ -185,6 +195,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    }
+
+    .fe-arrow-down-circle{
+    	margin-left: 12px;
     }
 
     .splashscreen{
@@ -251,28 +265,62 @@
       </div>
       <div class="app-body">
         <div class="app-body__container">
-          <ul class="nav nav-tabs process-model more-icon-preocess" role="tablist">
-            <li role="presentation" class="active"><a href="#step-1" aria-controls="step-1" role="tab"
-                data-toggle="tab"><i class="fa fa-search" aria-hidden="true"></i>
-                <p>step-1</p>
-              </a></li>
-            <li role="presentation"><a href="#step-2" aria-controls="step-2" role="tab" data-toggle="tab"><i
-                  class="fa fa-send-o" aria-hidden="true"></i>
-                <p>step-2</p>
-              </a></li>
-            <li role="presentation"><a href="#step-3" aria-controls="step-3" role="tab" data-toggle="tab"><i
-                  class="fa fa-qrcode" aria-hidden="true"></i>
-                <p>step-3</p>
-              </a></li>
-          </ul>
+        	<div class="col-xl-12">
+	          <ul class="nav nav-tabs process-model more-icon-preocess" role="tablist">
+	          	<p class="nav-tabs--title">Choose :</p> 
+	            <li role="presentation" class="nav-tabs--link active"><a href="#step-1" aria-controls="step-1" role="tab"
+	                data-toggle="tab"><i aria-hidden="true"></i>
+	                <p>Theme</p>
+	              </a></li>
+	            <li class="nav-tabs--link"><i class="fe fe-minus" aria-hidden="true"></i>
+	              </li>
+	            <li role="presentation" class="nav-tabs--link"><a href="#step-2" aria-controls="step-2" role="tab" data-toggle="tab"><i
+	                  aria-hidden="true"></i>
+	                <p>Icon</p>
+	              </a></li>
+	            <li class="nav-tabs--link"><i class="fe fe-minus" aria-hidden="true"></i>
+	              </li>
+	            <li class="nav-tabs--link" role="presentation"><a href="#step-3" aria-controls="step-3" role="tab" data-toggle="tab"><i
+	                  aria-hidden="true"></i>
+	                <p>Splashscreen</p>
+	              </a></li>
+	          </ul>
+        	</div>
           <!-- end design process steps-->
           <!-- Tab panes -->
           <div class="tab-content">
             <div role="tabpanel" class="tab-pane active" id="step-1">
               <div class="design-process-content">
-                <h3 class="semi-bold">step-1</h3>
-                <p>1. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincid unt ut
-                  laoreet dolore magna aliquam erat volutpat</p>
+              	  <div class="row justify-content-center">
+              	  	<div class="col-xl-4 mt-6">
+              	  		<ul class="nav nav-tabs border-0 flex-column flex-lg-row">
+		                  <li class="nav-item dropdown">
+		                    <a href="javascript:void(0)" class="nav-link d-flex justify-content-end" data-toggle="dropdown"> Restaurant <i class="fe fe-arrow-down-circle"></i></a>
+		                    <div class="dropdown-menu">
+		                      <a href="./maps.html" class="dropdown-item ">Maps</a>
+		                      <a href="./icons.html" class="dropdown-item ">Icons</a>
+		                      <a href="./store.html" class="dropdown-item ">Store</a>
+		                      <a href="./blog.html" class="dropdown-item ">Blog</a>
+		                      <a href="./carousel.html" class="dropdown-item ">Carousel</a>
+		                    </div>
+		                  </li>              	  			
+              	  		</ul>
+              	  	</div>
+              	  	<div class="col-xl-4 mt-6">
+              	  		<ul class="nav nav-tabs border-0 flex-column flex-lg-row">
+		                  <li class="nav-item dropdown">
+		                    <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"> Color <i class="fe fe-arrow-down-circle"></i></a>
+		                    <div class="dropdown-menu">
+		                      <a href="./maps.html" class="dropdown-item ">Maps</a>
+		                      <a href="./icons.html" class="dropdown-item ">Icons</a>
+		                      <a href="./store.html" class="dropdown-item ">Store</a>
+		                      <a href="./blog.html" class="dropdown-item ">Blog</a>
+		                      <a href="./carousel.html" class="dropdown-item ">Carousel</a>
+		                    </div>
+		                  </li>              	  			
+              	  		</ul>
+              	  	</div>
+              	  </div>
                   <div class="row">
                   	<div class="col-xl-3">
                   		<div class="theme"></div>
@@ -305,9 +353,6 @@
             </div>
             <div role="tabpanel" class="tab-pane" id="step-2">
               <div class="design-process-content">
-                <h3 class="semi-bold">step-2</h3>
-                <p>2. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincid unt ut
-                  laoreet dolore magna aliquam erat volutpat</p>
 		          <div class="col-xs-4 d-flex justify-content-center">
 		            <div id="image-preview" class="embed-responsive">
 		              <div class="embed-responsive-item">
@@ -320,9 +365,6 @@
             </div>
             <div role="tabpanel" class="tab-pane" id="step-3">
               <div class="design-process-content">
-                <h3 class="semi-bold">step-3</h3>
-                <p>3. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincid unt ut
-                  laoreet dolore magna aliquam erat volutpat</p>
                   <div class="col-xs-4 d-flex justify-content-center">
 		            <div id="image-splashpreview" class="embed-responsive splashscreen">
 		              <div class="embed-responsive-item">
@@ -348,7 +390,6 @@
       var href = $(e.target).attr('href');
       var $curr = $(".process-model  a[href='" + href + "']").parent();
 
-      $('.process-model li').removeClass();
 
       $curr.addClass("active");
       $curr.prevAll().addClass("visited");
