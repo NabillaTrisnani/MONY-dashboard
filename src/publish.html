@@ -41,6 +41,8 @@
   <!-- Datatables Plugin -->
   <script src="./assets/plugins/datatables/plugin.js"></script>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation.min.css">
+
   <link rel="stylesheet" type="text/css" href="css/dashboard.css">
   <style>
      body {
@@ -98,7 +100,7 @@
     }
 
     .app-body {
-      width: 1 1 auto;
+      flex: 1 1 auto;
     }
 
     .app-body__container {
@@ -146,6 +148,132 @@
     .tab-pane{
       margin-top: 70px;
     }
+
+    @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.box {
+  display: block;
+  min-width: 300px;
+  margin: 10px;
+  background-color: white;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+}
+.upload-options {
+  position: relative;
+  height: 75px;
+  background-color: cadetblue;
+  cursor: pointer;
+  overflow: hidden;
+  text-align: center;
+  transition: background-color ease-in-out 150ms;
+  margin-top: 8px;
+  border-radius: 8px;
+  height: 27px;
+}
+.upload-options:hover {
+  background-color: #7fb1b3;
+}
+.upload-options input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.upload-options label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  overflow: hidden;
+}
+.upload-options label::after {
+  content: 'Upload Image';
+  font-size: 14px;
+  color: rgba(230, 230, 230, 1);
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 0;
+}
+.upload-options label span {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  vertical-align: middle;
+  text-align: center;
+}
+.upload-options label span:hover i.material-icons {
+  color: lightgray;
+}
+.js--image-preview {
+  height: 147px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-image: url('http://placehold.it/1024x500');
+  background-color: white;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 8px;
+}
+.js--image-preview::after {
+  position: relative;
+  font-size: 4.5em;
+  color: rgba(230, 230, 230, 1);
+  top: calc(50% - 3rem);
+  left: calc(50% - 2.25rem);
+  z-index: 0;
+}
+.js--image-preview.js--no-default::after {
+  display: none;
+}
+.js--image-preview:nth-child(2) {
+  background-image: url('http://bastianandre.at/giphy.gif');
+}
+i.material-icons {
+  transition: color 100ms ease-in-out;
+  font-size: 2.25em;
+  line-height: 55px;
+  color: white;
+  display: block;
+}
+.drop {
+  display: block;
+  position: absolute;
+  background: rgba(95, 158, 160, 0.2);
+  border-radius: 100%;
+  transform: scale(0);
+}
+.animate {
+  animation: ripple 0.4s linear;
+}
+@keyframes ripple {
+  100% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+}
+
 
   </style>
 </head>
@@ -229,79 +357,21 @@
                 <h1 class="text-center">Publish Aplikasimu Sekarang</h1>
                 <p class="text-center">Tolong Isi Form Detail Terlebih Dahulu</p>
                 <form class="card">
-                  <div class="card-body">
-                    <h3 class="card-title">Edit Profile</h3>
-                    <div class="row">
-                      <div class="col-md-5">
-                        <div class="form-group">
-                          <label class="form-label">Company</label>
-                          <input type="text" class="form-control" disabled="" placeholder="Company"
-                            value="Creative Code Inc.">
+                  <div class="row">
+                    <div class="col-xl-4">
+                      <div class="wrapper">
+                        <div class="box">
+                          <div class="js--image-preview"></div>
+                          <div class="upload-options">
+                            <label>
+                              <input type="file" class="image-upload fe fe-menu" accept="image/*" />
+                            </label>
+                          </div>
                         </div>
                       </div>
-                      <div class="col-sm-6 col-md-3">
-                        <div class="form-group">
-                          <label class="form-label">Username</label>
-                          <input type="text" class="form-control" placeholder="Username" value="michael23">
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-md-4">
-                        <div class="form-group">
-                          <label class="form-label">Email address</label>
-                          <input type="email" class="form-control" placeholder="Email">
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-md-6">
-                        <div class="form-group">
-                          <label class="form-label">First Name</label>
-                          <input type="text" class="form-control" placeholder="Company" value="Chet">
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-md-6">
-                        <div class="form-group">
-                          <label class="form-label">Last Name</label>
-                          <input type="text" class="form-control" placeholder="Last Name" value="Faker">
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <label class="form-label">Address</label>
-                          <input type="text" class="form-control" placeholder="Home Address" value="Melbourne, Australia">
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-md-4">
-                        <div class="form-group">
-                          <label class="form-label">City</label>
-                          <input type="text" class="form-control" placeholder="City" value="Melbourne">
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-md-3">
-                        <div class="form-group">
-                          <label class="form-label">Postal Code</label>
-                          <input type="number" class="form-control" placeholder="ZIP Code">
-                        </div>
-                      </div>
-                      <div class="col-md-5">
-                        <div class="form-group">
-                          <label class="form-label">Country</label>
-                          <select class="form-control custom-select">
-                            <option value="">Germany</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="form-group mb-0">
-                          <label class="form-label">About Me</label>
-                          <textarea rows="5" class="form-control" placeholder="Here can be your description" value="Mike">Oh so, your weak rhyme
-        You doubt I'll bother, reading into it
-        I'll probably won't, left to my own devices
-        But that's the difference in our opinions.</textarea>
-                        </div>
-                      </div>
+                      <h4>Pilihan Developer ID</h4>
                     </div>
-                  </div>
-                  <div class="card-footer text-right">
-                    <button type="submit" class="btn btn-primary">Update Profile</button>
+                    <div class="col-xl-8"></div>
                   </div>
                 </form>
               </div>
@@ -330,6 +400,98 @@
       $curr.prevAll().addClass("visited");
     });
     // end  script for tab steps
+
+    function initImageUpload(box) {
+  let uploadField = box.querySelector('.image-upload');
+
+  uploadField.addEventListener('change', getFile);
+
+  function getFile(e){
+    let file = e.currentTarget.files[0];
+    checkType(file);
+  }
+  
+  function previewImage(file){
+    let thumb = box.querySelector('.js--image-preview'),
+        reader = new FileReader();
+
+    reader.onload = function() {
+      thumb.style.backgroundImage = 'url(' + reader.result + ')';
+    }
+    reader.readAsDataURL(file);
+    thumb.className += ' js--no-default';
+  }
+
+  function checkType(file){
+    let imageType = /image.*/;
+    if (!file.type.match(imageType)) {
+      throw 'Datei ist kein Bild';
+    } else if (!file){
+      throw 'Kein Bild gewählt';
+    } else {
+      previewImage(file);
+    }
+  }
+  
+}
+
+// initialize box-scope
+var boxes = document.querySelectorAll('.box');
+
+for (let i = 0; i < boxes.length; i++) {
+  let box = boxes[i];
+  initDropEffect(box);
+  initImageUpload(box);
+}
+
+
+
+/// drop-effect
+function initDropEffect(box){
+  let area, drop, areaWidth, areaHeight, maxDistance, dropWidth, dropHeight, x, y;
+  
+  // get clickable area for drop effect
+  area = box.querySelector('.js--image-preview');
+  area.addEventListener('click', fireRipple);
+  
+  function fireRipple(e){
+    area = e.currentTarget
+    // create drop
+    if(!drop){
+      drop = document.createElement('span');
+      drop.className = 'drop';
+      this.appendChild(drop);
+    }
+    // reset animate class
+    drop.className = 'drop';
+    
+    // calculate dimensions of area (longest side)
+    areaWidth = getComputedStyle(this, null).getPropertyValue("width");
+    areaHeight = getComputedStyle(this, null).getPropertyValue("height");
+    maxDistance = Math.max(parseInt(areaWidth, 10), parseInt(areaHeight, 10));
+
+    // set drop dimensions to fill area
+    drop.style.width = maxDistance + 'px';
+    drop.style.height = maxDistance + 'px';
+    
+    // calculate dimensions of drop
+    dropWidth = getComputedStyle(this, null).getPropertyValue("width");
+    dropHeight = getComputedStyle(this, null).getPropertyValue("height");
+    
+    // calculate relative coordinates of click
+    // logic: click coordinates relative to page - parent's position relative to page - half of self height/width to make it controllable from the center
+    x = e.pageX - this.offsetLeft - (parseInt(dropWidth, 10)/2);
+    y = e.pageY - this.offsetTop - (parseInt(dropHeight, 10)/2) - 30;
+    
+    // position drop and animate
+    drop.style.top = y + 'px';
+    drop.style.left = x + 'px';
+    drop.className += ' animate';
+    e.stopPropagation();
+    
+  }
+}
+
   </script>
 </body>
 
