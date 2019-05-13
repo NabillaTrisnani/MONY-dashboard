@@ -148,11 +148,11 @@
     .tab-pane{
       margin-top: 70px;
     }
-
+/*
     .card{
       border: none;
     }
-
+*/
     @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 .wrapper {
@@ -274,23 +274,6 @@ i.material-icons {
   }
 }
 
-.form-control {
-    width: 100%;
-    max-width: 540px;
-}
-.form-short-description{
-  height: 87px;
-}
-.form-full-description{
-  height: 119px;
-}
-.form-url{
-  height: 46px;
-}
-.form-email, .form-phone{
-  height: 45px;
-}
-
   </style>
 </head>
 
@@ -386,6 +369,16 @@ i.material-icons {
                           </div>
                         </div>
                       </div>
+                    </div>
+                    <div class="col-xl-6">
+                      <div class="form-group">
+                        <label class="form-label">Full name<span class="form-required">*</span></label>
+                        <input type="text" class="form-control" />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">Company<span class="form-required">*</span></label>
+                        <input type="text" class="form-control" />
+                      </div>
                       <h4>Pilihan Developer ID</h4>
                       <div class="form-group">
                         <div class="form-label">Play Store</div>
@@ -413,22 +406,13 @@ i.material-icons {
                           </label>
                         </div>
                       </div>
-                    </div>
-                    <div class="col-xl-6">
                       <div class="form-group">
-                        <input type="text" class="form-control form-short-description" placeholder="Short Description" />
+                        <label class="form-label">Email<span class="form-required">*</span></label>
+                        <input type="email" class="form-control" />
                       </div>
-                      <div class="form-group">
-                        <input type="text" class="form-control form-full-description" placeholder="Full Description" />
-                      </div>
-                      <div class="form-group">
-                        <input type="text" class="form-control form-url" placeholder="Url Website (Optional)" />
-                      </div>
-                      <div class="form-group">
-                        <input type="text" class="form-control form-email" placeholder="Contact Email" />
-                      </div>
-                      <div class="form-group">
-                        <input type="text" class="form-control form-phone" placeholder="Phone Number" />
+                      <div class="form-group mb-0">
+                        <label class="form-label">Phone number</label>
+                        <input type="tel" class="form-control" />
                       </div>
                     </div>
                   </div>
