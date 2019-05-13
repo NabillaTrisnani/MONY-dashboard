@@ -104,7 +104,7 @@
     }
 
     .app-body__container {
-      width: 80%;
+      width: 100%;
       margin: 50px auto;
     }
 
@@ -149,14 +149,14 @@
       margin-top: 70px;
     }
 
+    .card{
+      border: none;
+    }
+
     @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 .wrapper {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
 }
 .box {
   display: block;
@@ -274,15 +274,31 @@ i.material-icons {
   }
 }
 
+.form-control {
+    width: 100%;
+    max-width: 540px;
+}
+.form-short-description{
+  height: 87px;
+}
+.form-full-description{
+  height: 119px;
+}
+.form-url{
+  height: 46px;
+}
+.form-email, .form-phone{
+  height: 45px;
+}
 
   </style>
 </head>
 
 <body>
   <section class="app app-dashboard">
-    <!-- <div class="app-navbar">
+    <div class="app-navbar">
       Navbar
-    </div> -->
+    </div>
     <div class="app-layout">
       <div class="app-side">
         <div class="app-sidemenu">
@@ -357,8 +373,9 @@ i.material-icons {
                 <h1 class="text-center">Publish Aplikasimu Sekarang</h1>
                 <p class="text-center">Tolong Isi Form Detail Terlebih Dahulu</p>
                 <form class="card">
-                  <div class="row">
-                    <div class="col-xl-4">
+                  <div class="row m-0">
+                    <div class="col-xl-6">
+                      <p class="text-center">Uplaod Image Google Play Feature</p>
                       <div class="wrapper">
                         <div class="box">
                           <div class="js--image-preview"></div>
@@ -370,8 +387,50 @@ i.material-icons {
                         </div>
                       </div>
                       <h4>Pilihan Developer ID</h4>
+                      <div class="form-group">
+                        <div class="form-label">Play Store</div>
+                        <div class="custom-controls-stacked">
+                          <label class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input" name="example-radios" value="option1" checked>
+                            <div class="custom-control-label">Saya Memiliki Google Developer ID</div>
+                          </label>
+                          <label class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input" name="example-radios" value="option2">
+                            <div class="custom-control-label">I will use COMPRO's Google Developer ID</div>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="form-label">App Store</div>
+                        <div class="custom-controls-stacked">
+                          <label class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input" name="example-inline-radios" value="option1" checked>
+                            <div class="custom-control-label">I also want to publish on App Store</div>
+                          </label>
+                          <label class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input" name="example-inline-radios" value="option2">
+                            <div class="custom-control-label">I do not want to publish on App Store</div>
+                          </label>
+                        </div>
+                      </div>
                     </div>
-                    <div class="col-xl-8"></div>
+                    <div class="col-xl-6">
+                      <div class="form-group">
+                        <input type="text" class="form-control form-short-description" placeholder="Short Description" />
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control form-full-description" placeholder="Full Description" />
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control form-url" placeholder="Url Website (Optional)" />
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control form-email" placeholder="Contact Email" />
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control form-phone" placeholder="Phone Number" />
+                      </div>
+                    </div>
                   </div>
                 </form>
               </div>
