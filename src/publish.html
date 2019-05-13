@@ -41,11 +41,9 @@
   <!-- Datatables Plugin -->
   <script src="./assets/plugins/datatables/plugin.js"></script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation.min.css">
-
   <link rel="stylesheet" type="text/css" href="css/dashboard.css">
   <style>
-     body {
+    body {
       background-color: #fafafa;
     }
 
@@ -85,10 +83,6 @@
       margin: 0;
     }
 
-    p{
-      margin: 0;
-    }
-
     .nav-link,
     .nav-item {
       width: 100%;
@@ -100,20 +94,17 @@
     }
 
     .app-body {
-      flex: 1 1 auto;
+      width: 1 1 auto;
     }
 
     .app-body__container {
-      width: 100%;
+      width: 80%;
       margin: 50px auto;
     }
 
     .app-side {
       display: flex;
       flex: 0 0 330px;
-    }
-    .nav-tabs{
-      border: none;
     }
     .nav-tabs .nav-link{
         padding: 1rem;
@@ -139,22 +130,19 @@
     .nav-tabs .nav-item span{
         width: auto;
     }
-    .nav-tabs--link{
-      margin: auto auto auto 0;
-    display: flex;
-    font-size: 28px;
+    .toggler{
+        margin-left: auto;
+        font-size: 20px !important;
+    }
+    .manage-modules--title{
+        padding: 1rem;
+        width: inherit;
+        font-size: 19px;
+        margin: 0;
+        background: #e4e4e4;
+        color: #fff;
     }
 
-    .tab-pane{
-      margin-top: 70px;
-    }
-/*
-    .card{
-      border: none;
-    }
-*/
-    @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
-@import url('https://fonts.googleapis.com/css?family=Raleway');
 .wrapper {
   display: flex;
 }
@@ -517,7 +505,6 @@ i.material-icons {
   </section>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <!-- <script src="https://opoloo.github.io/jquery_upload_preview/assets/js/jquery.uploadPreview.min.js"></script> -->
   <script>
     // script for tab steps
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
