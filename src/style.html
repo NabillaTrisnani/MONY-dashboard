@@ -349,6 +349,11 @@
                   		<div class="theme"></div>
                   	</div>
                   </div>
+                  <div class="nav nav-tabs process-model more-icon-preocess d-flex justify-content-end" role="tablist">
+                    <a href="#step-2" class="btn btn-primary" aria-controls="step-2" role="tab" data-toggle="tab"><i aria-hidden="true"></i>
+                        Next
+                    </a>
+                  </div>
               </div>
             </div>
             <div role="tabpanel" class="tab-pane" id="step-2">
@@ -361,18 +366,30 @@
 		              </div>
 		            </div>
 		          </div>
+              <div class="row d-flex justify-content-end">
+                <div class="nav nav-tabs process-model more-icon-preocess" role="tablist">
+                  <button class="btn btn-primary mr-4">Simpan</button>
+                  <a href="#step-3" class="btn btn-primary" aria-controls="step-3" role="tab" data-toggle="tab"><i aria-hidden="true"></i>
+                    Next
+                  </a>
+                </div>
+              </div>
               </div>
             </div>
             <div role="tabpanel" class="tab-pane" id="step-3">
               <div class="design-process-content">
-                  <div class="col-xs-4 d-flex justify-content-center">
-		            <div id="image-splashpreview" class="embed-responsive splashscreen">
-		              <div class="embed-responsive-item">
-		                <label for="image-splash-upload" id="image-splashlabel"><i class="fe fe-plus"></i></label>
-		                <input type="file" name="image" id="image-splash-upload" />
-		              </div>
-		            </div>
-		          </div>
+                <div class="col-xs-4 d-flex justify-content-center">
+  		            <div id="image-splashpreview" class="embed-responsive splashscreen">
+  		              <div class="embed-responsive-item">
+  		                <label for="image-splash-upload" id="image-splashlabel"><i class="fe fe-plus"></i></label>
+  		                <input type="file" name="image" id="image-splash-upload" />
+  		              </div>
+  		            </div>
+  		          </div>
+                <div class="row d-flex justify-content-end">
+                  <a href="" class="btn btn-primary mr-4" role="button">Simpan</a>
+                  <a href="content.html" class="btn btn-primary" role="button">Next</a>
+                </div>
               </div>
             </div>
           </div>
@@ -382,7 +399,6 @@
   </section>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <!-- <script src="https://opoloo.github.io/jquery_upload_preview/assets/js/jquery.uploadPreview.min.js"></script> -->
   <script>
     // script for tab steps
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
