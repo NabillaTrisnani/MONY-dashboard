@@ -46,9 +46,11 @@
     body {
       background-color: #fafafa;
     }
-    p{
-    	margin: 0;
+
+    p {
+      margin: 0;
     }
+
     .app-layout {
       display: flex;
       min-height: 100vh;
@@ -90,9 +92,9 @@
       width: 100%;
     }
 
-    .sidebar-link{
-        display: flex;
-        flex-direction: column;
+    .sidebar-link {
+      display: flex;
+      flex-direction: column;
     }
 
     .app-body {
@@ -108,59 +110,66 @@
       display: flex;
       flex: 0 0 330px;
     }
-    .nav-tabs{
-    	border: none;
-    }
-    .nav-tabs .nav-link{
-        padding: 1rem;
-    }
-    .nav-tabs .nav-link:hover:not(.disabled){
-        border-color: transparent;
-    }
-    .nav-tabs .nav-link:hover{
-        border-color: transparent;
-    }
-    .nav-tabs .nav-item i{
-        font-size: 24px;
-        margin-right: initial;
-        line-height: normal;
-        vertical-align: initial;
-        display: initial;
-        width: auto;
-    }
-    .nav-tabs .nav-item span{
-        width: auto;
-    }
-    .toggler{
-        margin-left: auto;
-        font-size: 20px !important;
-    }
-    .nav-tabs--title{
-    	font-size: 28px;
-    }
-    .nav-tabs--link{
-    	margin: auto auto auto 0;
-		display: flex;
-		font-size: 28px;
-    }
-    .manage-modules--title{
-        padding: 1rem;
-        width: inherit;
-        font-size: 19px;
-        margin: 0;
-        background: #e4e4e4;
-        color: #fff;
+
+    .nav-tabs {
+      border: none;
     }
 
-    .theme{
-    	background-color: #e8e8e8;
-    	width: 145px;
-		height: 227px;
-		margin: 16px 20px;
+    .nav-tabs .nav-link {
+      padding: 1rem;
+    }
+
+    .nav-tabs .nav-link:hover:not(.disabled) {
+      border-color: transparent;
+    }
+
+    .nav-tabs .nav-link:hover {
+      border-color: transparent;
+    }
+
+    .nav-tabs .nav-item i {
+      font-size: 24px;
+      margin-right: initial;
+      line-height: normal;
+      vertical-align: initial;
+      display: initial;
+      width: auto;
+    }
+
+    .nav-tabs .nav-item span {
+      width: auto;
+    }
+
+    .toggler {
+      margin-left: auto;
+      font-size: 20px !important;
+    }
+
+    .nav-tabs--link {
+      margin: auto 10px auto 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .manage-modules--title {
+      padding: 1rem;
+      width: inherit;
+      font-size: 19px;
+      margin: 0;
+      background: #e4e4e4;
+      color: #fff;
+    }
+
+    .theme {
+      background-color: #e8e8e8;
+      width: 100%;
+      height: 150px;
+      /* margin: 16px 20px; */
     }
 
     /*image preview*/
-    #image-preview, #image-splashpreview {
+    #image-preview,
+    #image-splashpreview {
       position: relative;
       display: block;
       padding-bottom: 248px;
@@ -169,42 +178,47 @@
       color: #ecf0f1;
       margin: 135px auto;
     }
-    #image-preview  input, #image-splashpreview input {
+
+    #image-preview input,
+    #image-splashpreview input {
       line-height: 200px;
       font-size: 200px;
       position: absolute;
       opacity: 0;
       z-index: 10;
     }
+
     label {
-          position: absolute;
-    z-index: 5;
-    padding: 3px 5px;
-    opacity: 0.8;
-    cursor: pointer;
-    font-size: 20px;
-    line-height: 20px;
-    text-transform: uppercase;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    color: #fff;
-    font-size: 118px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+      position: absolute;
+      z-index: 5;
+      padding: 3px 5px;
+      opacity: 0.8;
+      cursor: pointer;
+      font-size: 20px;
+      line-height: 20px;
+      text-transform: uppercase;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      color: #fff;
+      font-size: 118px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .fe-arrow-down-circle{
-    	margin-left: 12px;
+    .fe-arrow-down-circle {
+      margin-left: 12px;
     }
 
-    .splashscreen{
-    	height: 381px;
+    .splashscreen {
+      height: 381px;
     }
-
+    .nav-tabs {
+      margin: 0;
+    }
   </style>
 </head>
 
@@ -265,127 +279,119 @@
       </div>
       <div class="app-body">
         <div class="app-body__container">
-        	<div class="col-xl-12">
-	          <ul class="nav nav-tabs process-model more-icon-preocess" role="tablist">
-	          	<p class="nav-tabs--title">Choose :</p> 
-	            <li role="presentation" class="nav-tabs--link active"><a href="#step-1" aria-controls="step-1" role="tab"
-	                data-toggle="tab"><i aria-hidden="true"></i>
-	                <p>Theme</p>
-	              </a></li>
-	            <li class="nav-tabs--link"><i class="fe fe-minus" aria-hidden="true"></i>
-	              </li>
-	            <li role="presentation" class="nav-tabs--link"><a href="#step-2" aria-controls="step-2" role="tab" data-toggle="tab"><i
-	                  aria-hidden="true"></i>
-	                <p>Icon</p>
-	              </a></li>
-	            <li class="nav-tabs--link"><i class="fe fe-minus" aria-hidden="true"></i>
-	              </li>
-	            <li class="nav-tabs--link" role="presentation"><a href="#step-3" aria-controls="step-3" role="tab" data-toggle="tab"><i
-	                  aria-hidden="true"></i>
-	                <p>Splashscreen</p>
-	              </a></li>
-	          </ul>
-        	</div>
+            <ul class="nav nav-tabs process-model more-icon-preocess" role="tablist">
+              <!-- <p class="nav-tabs--title">Choose :</p> -->
+              <li role="presentation" class="nav-tabs--link active"><a href="#step-1" aria-controls="step-1" role="tab"
+                  data-toggle="tab"><i aria-hidden="true"></i>
+                  <p>Theme</p>
+                </a></li>
+              <li class="nav-tabs--link"><i class="fe fe-minus" aria-hidden="true"></i>
+              </li>
+              <li role="presentation" class="nav-tabs--link"><a href="#step-2" aria-controls="step-2" role="tab"
+                  data-toggle="tab"><i aria-hidden="true"></i>
+                  <p>Icon</p>
+                </a></li>
+              <li class="nav-tabs--link"><i class="fe fe-minus" aria-hidden="true"></i>
+              </li>
+              <li class="nav-tabs--link" role="presentation"><a href="#step-3" aria-controls="step-3" role="tab"
+                  data-toggle="tab"><i aria-hidden="true"></i>
+                  <p>Splashscreen</p>
+                </a></li>
+            </ul>
           <!-- end design process steps-->
           <!-- Tab panes -->
           <div class="tab-content">
             <div role="tabpanel" class="tab-pane active" id="step-1">
               <div class="design-process-content">
-              	  <div class="row justify-content-center">
-              	  	<div class="col-xl-4 mt-6">
-              	  		<ul class="nav nav-tabs border-0 flex-column flex-lg-row">
-		                  <li class="nav-item dropdown">
-		                    <a href="javascript:void(0)" class="nav-link d-flex justify-content-end" data-toggle="dropdown"> Restaurant <i class="fe fe-arrow-down-circle"></i></a>
-		                    <div class="dropdown-menu">
-		                      <a href="./maps.html" class="dropdown-item ">Maps</a>
-		                      <a href="./icons.html" class="dropdown-item ">Icons</a>
-		                      <a href="./store.html" class="dropdown-item ">Store</a>
-		                      <a href="./blog.html" class="dropdown-item ">Blog</a>
-		                      <a href="./carousel.html" class="dropdown-item ">Carousel</a>
-		                    </div>
-		                  </li>              	  			
-              	  		</ul>
-              	  	</div>
-              	  	<div class="col-xl-4 mt-6">
-              	  		<ul class="nav nav-tabs border-0 flex-column flex-lg-row">
-		                  <li class="nav-item dropdown">
-		                    <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"> Color <i class="fe fe-arrow-down-circle"></i></a>
-		                    <div class="dropdown-menu">
-		                      <a href="./maps.html" class="dropdown-item ">Maps</a>
-		                      <a href="./icons.html" class="dropdown-item ">Icons</a>
-		                      <a href="./store.html" class="dropdown-item ">Store</a>
-		                      <a href="./blog.html" class="dropdown-item ">Blog</a>
-		                      <a href="./carousel.html" class="dropdown-item ">Carousel</a>
-		                    </div>
-		                  </li>              	  			
-              	  		</ul>
-              	  	</div>
-              	  </div>
-                  <div class="row">
-                  	<div class="col-xl-3">
-                  		<div class="theme"></div>
-                  	</div>
-                  	<div class="col-xl-3">
-                  		<div class="theme"></div>
-                  	</div>
-                  	<div class="col-xl-3">
-                  		<div class="theme"></div>
-                  	</div>
-                  	<div class="col-xl-3">
-                  		<div class="theme"></div>
-                  	</div>
+                <div class="row">
+                  <div class="col-md-3">
+                    <select class="form-control" name="" id="">
+                      <option value="">0</option>
+                      <option value="">1</option>
+                      <option value="">2</option>
+                      <option value="">3</option>
+                      <option value="">4</option>
+                      <option value="">5</option>
+                    </select>
                   </div>
-                  <div class="row">
-                  	<div class="col-xl-3">
-                  		<div class="theme"></div>
-                  	</div>
-                  	<div class="col-xl-3">
-                  		<div class="theme"></div>
-                  	</div>
-                  	<div class="col-xl-3">
-                  		<div class="theme"></div>
-                  	</div>
-                  	<div class="col-xl-3">
-                  		<div class="theme"></div>
-                  	</div>
+                  <div class="col-md-3">
+                    <select class="form-control" name="" id="">
+                      <option value="">0</option>
+                      <option value="">1</option>
+                      <option value="">2</option>
+                      <option value="">3</option>
+                      <option value="">4</option>
+                      <option value="">5</option>
+                    </select>
                   </div>
-                  <div class="nav nav-tabs process-model more-icon-preocess d-flex justify-content-end" role="tablist">
-                    <a href="#step-2" class="btn btn-primary" aria-controls="step-2" role="tab" data-toggle="tab"><i aria-hidden="true"></i>
-                        Next
-                    </a>
+                </div>
+                <div class="row">
+                  <div class="col-xl-3">
+                    <div class="theme"></div>
                   </div>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane" id="step-2">
-              <div class="design-process-content">
-		          <div class="col-xs-4 d-flex justify-content-center">
-		            <div id="image-preview" class="embed-responsive">
-		              <div class="embed-responsive-item">
-		                <label for="image-upload" id="image-label"><i class="fe fe-plus"></i></label>
-		                <input type="file" name="image" id="image-upload" />
-		              </div>
-		            </div>
-		          </div>
-              <div class="row d-flex justify-content-end">
-                <div class="nav nav-tabs process-model more-icon-preocess" role="tablist">
-                  <button class="btn btn-primary mr-4">Simpan</button>
-                  <a href="#step-3" class="btn btn-primary" aria-controls="step-3" role="tab" data-toggle="tab"><i aria-hidden="true"></i>
+                  <div class="col-xl-3">
+                    <div class="theme"></div>
+                  </div>
+                  <div class="col-xl-3">
+                    <div class="theme"></div>
+                  </div>
+                  <div class="col-xl-3">
+                    <div class="theme"></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xl-3">
+                    <div class="theme"></div>
+                  </div>
+                  <div class="col-xl-3">
+                    <div class="theme"></div>
+                  </div>
+                  <div class="col-xl-3">
+                    <div class="theme"></div>
+                  </div>
+                  <div class="col-xl-3">
+                    <div class="theme"></div>
+                  </div>
+                </div>
+                <div class="nav nav-tabs process-model more-icon-preocess d-flex justify-content-end" role="tablist">
+                  <a href="#step-2" class="btn btn-primary" aria-controls="step-2" role="tab" data-toggle="tab"><i
+                      aria-hidden="true"></i>
                     Next
                   </a>
                 </div>
               </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="step-2">
+              <div class="design-process-content">
+                <div class="col-xs-4 d-flex justify-content-center">
+                  <div id="image-preview" class="embed-responsive">
+                    <div class="embed-responsive-item">
+                      <label for="image-upload" id="image-label"><i class="fe fe-plus"></i></label>
+                      <input type="file" name="image" id="image-upload" />
+                    </div>
+                  </div>
+                </div>
+                <div class="row d-flex justify-content-end">
+                  <div class="nav nav-tabs process-model more-icon-preocess" role="tablist">
+                    <button class="btn btn-primary mr-4">Simpan</button>
+                    <a href="#step-3" class="btn btn-primary" aria-controls="step-3" role="tab" data-toggle="tab"><i
+                        aria-hidden="true"></i>
+                      Next
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
             <div role="tabpanel" class="tab-pane" id="step-3">
               <div class="design-process-content">
                 <div class="col-xs-4 d-flex justify-content-center">
-  		            <div id="image-splashpreview" class="embed-responsive splashscreen">
-  		              <div class="embed-responsive-item">
-  		                <label for="image-splash-upload" id="image-splashlabel"><i class="fe fe-plus"></i></label>
-  		                <input type="file" name="image" id="image-splash-upload" />
-  		              </div>
-  		            </div>
-  		          </div>
+                  <div id="image-splashpreview" class="embed-responsive splashscreen">
+                    <div class="embed-responsive-item">
+                      <label for="image-splash-upload" id="image-splashlabel"><i class="fe fe-plus"></i></label>
+                      <input type="file" name="image" id="image-splash-upload" />
+                    </div>
+                  </div>
+                </div>
                 <div class="row d-flex justify-content-end">
                   <a href="" class="btn btn-primary mr-4" role="button">Simpan</a>
                   <a href="content.html" class="btn btn-primary" role="button">Next</a>
@@ -412,14 +418,80 @@
     });
     // end  script for tab steps
 
-!function(e){e.extend({uploadPreview:function(l){var i=e.extend({input_field:".image-input",preview_box:".image-preview",label_field:".image-label",label_default:"",label_selected:"",no_label:!1,success_callback:null},l);
-  return window.File&&window.FileList&&window.FileReader?void(void 0!==e(i.input_field)&&null!==e(i.input_field)&&e(i.input_field).change(function(){var l=this.files;if(l.length>0){var a=l[0],o=new FileReader;o.addEventListener("load",function(l){var o=l.target;a.type.match("image")?(e(i.preview_box).css("background-image","url("+o.result+")"),e(i.preview_box).css("background-size","contain"),e(i.preview_box).css("background-repeat","no-repeat"),e(i.preview_box).css("background-position","center center")):a.type.match("audio")?e(i.preview_box).html("<audio controls><source src='"+o.result+"' type='"+a.type+"' />Your browser does not support the audio element.</audio>"):alert("This file type is not supported yet.")}),0==i.no_label&&e(i.label_field).html(i.label_selected),o.readAsDataURL(a),i.success_callback&&i.success_callback()}else 0==i.no_label&&e(i.label_field).html(i.label_default),e(i.preview_box).css("background-image","none"),e(i.preview_box+" audio").remove()})):(alert("You need a browser with file reader support, to use this form properly."),!1)}})}(jQuery);
+    ! function (e) {
+      e.extend({
+        uploadPreview: function (l) {
+          var i = e.extend({
+            input_field: ".image-input",
+            preview_box: ".image-preview",
+            label_field: ".image-label",
+            label_default: "",
+            label_selected: "",
+            no_label: !1,
+            success_callback: null
+          }, l);
+          return window.File && window.FileList && window.FileReader ? void(void 0 !== e(i.input_field) &&
+            null !== e(i.input_field) && e(i.input_field).change(function () {
+              var l = this.files;
+              if (l.length > 0) {
+                var a = l[0],
+                  o = new FileReader;
+                o.addEventListener("load", function (l) {
+                    var o = l.target;
+                    a.type.match("image") ? (e(i.preview_box).css("background-image", "url(" + o.result +
+                      ")"), e(i.preview_box).css("background-size", "contain"), e(i.preview_box).css(
+                      "background-repeat", "no-repeat"), e(i.preview_box).css("background-position",
+                      "center center")) : a.type.match("audio") ? e(i.preview_box).html(
+                      "<audio controls><source src='" + o.result + "' type='" + a.type +
+                      "' />Your browser does not support the audio element.</audio>") : alert(
+                      "This file type is not supported yet.")
+                  }), 0 == i.no_label && e(i.label_field).html(i.label_selected), o.readAsDataURL(a), i
+                  .success_callback && i.success_callback()
+              } else 0 == i.no_label && e(i.label_field).html(i.label_default), e(i.preview_box).css(
+                "background-image", "none"), e(i.preview_box + " audio").remove()
+            })) : (alert("You need a browser with file reader support, to use this form properly."), !1)
+        }
+      })
+    }(jQuery);
 
-!function(e){e.extend({uploadSplash:function(l){var i=e.extend({input_field:".image-input",preview_box:".image-splashpreview",label_field:".image-splashlabel",label_default:"",label_selected:"",no_label:!1,success_callback:null},l);
-  return window.File&&window.FileList&&window.FileReader?void(void 0!==e(i.input_field)&&null!==e(i.input_field)&&e(i.input_field).change(function(){var l=this.files;if(l.length>0){var a=l[0],o=new FileReader;o.addEventListener("load",function(l){var o=l.target;a.type.match("image")?(e(i.preview_box).css("background-image","url("+o.result+")"),e(i.preview_box).css("background-size","contain"),e(i.preview_box).css("background-repeat","no-repeat"),e(i.preview_box).css("background-position","center center")):a.type.match("audio")?e(i.preview_box).html("<audio controls><source src='"+o.result+"' type='"+a.type+"' />Your browser does not support the audio element.</audio>"):alert("This file type is not supported yet.")}),0==i.no_label&&e(i.label_field).html(i.label_selected),o.readAsDataURL(a),i.success_callback&&i.success_callback()}else 0==i.no_label&&e(i.label_field).html(i.label_default),e(i.preview_box).css("background-image","none"),e(i.preview_box+" audio").remove()})):(alert("You need a browser with file reader support, to use this form properly."),!1)}})}(jQuery);
+    ! function (e) {
+      e.extend({
+        uploadSplash: function (l) {
+          var i = e.extend({
+            input_field: ".image-input",
+            preview_box: ".image-splashpreview",
+            label_field: ".image-splashlabel",
+            label_default: "",
+            label_selected: "",
+            no_label: !1,
+            success_callback: null
+          }, l);
+          return window.File && window.FileList && window.s FileReader ? void(void 0 !== e(i.input_field) &&
+            null !== e(i.input_field) && e(i.input_field).change(function () {
+              var l = this.files;
+              if (l.length > 0) {
+                var a = l[0],
+                  o = new FileReader;
+                o.addEventListener("load", function (l) {
+                    var o = l.target;
+                    a.type.match("image") ? (e(i.preview_box).css("background-image", "url(" + o.result +
+                      ")"), e(i.preview_box).css("background-size", "contain"), e(i.preview_box).css(
+                      "background-repeat", "no-repeat"), e(i.preview_box).css("background-position",
+                      "center center")) : a.type.match("audio") ? e(i.preview_box).html(
+                      "<audio controls><source src='" + o.result + "' type='" + a.type +
+                      "' />Your browser does not support the audio element.</audio>") : alert(
+                      "This file type is not supported yet.")
+                  }), 0 == i.no_label && e(i.label_field).html(i.label_selected), o.readAsDataURL(a), i
+                  .success_callback && i.success_callback()
+              } else 0 == i.no_label && e(i.label_field).html(i.label_default), e(i.preview_box).css(
+                "background-image", "none"), e(i.preview_box + " audio").remove()
+            })) : (alert("You need a browser with file reader support, to use this form properly."), !1)
+        }
+      })
+    }(jQuery);
 
 
-    $(document).ready(function() {
+    $(document).ready(function () {
       $.uploadPreview({
         input_field: "#image-upload",
         preview_box: "#image-preview",
@@ -427,7 +499,7 @@
       });
     });
 
-    $(document).ready(function() {
+    $(document).ready(function () {
       $.uploadSplash({
         input_field: "#image-splash-upload",
         preview_box: "#image-splashpreview",
