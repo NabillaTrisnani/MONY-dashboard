@@ -44,6 +44,11 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 
   <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+<script>
+ 
+
+</script>
+
 </head>
 
 <body>
@@ -125,64 +130,66 @@
                 <h1 class="text-center">Publish Aplikasimu Sekarang</h1>
                 <p class="text-center">Tolong Isi Form Detail Terlebih Dahulu</p>
                 <form class="card">
-                  <div class="row m-0">
-                    <div class="col-xl-6">
-                      <p class="text-center">Uplaod Image Google Play Feature</p>
-                      <div class="wrapper">
-                        <div class="box">
-                          <div class="js--image-preview"></div>
-                          <div class="upload-options">
-                            <label>
-                              <input type="file" class="image-upload fe fe-menu" accept="image/*" />
+                  <div class="card-body">
+                    <div class="row m-0">
+                      <div class="col-xl-6">
+                        <p class="text-center">Uplaod Image Google Play Feature</p>
+                        <div class="wrapper">
+                          <div class="box">
+                            <div class="js--image-preview"></div>
+                            <div class="upload-options">
+                              <label>
+                                <input type="file" class="image-upload fe fe-menu" accept="image/*" />
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <h4>Pilihan Developer ID</h4>
+                        <div class="form-group">
+                          <div class="form-label">Play Store</div>
+                          <div class="custom-controls-stacked">
+                            <label class="custom-control custom-radio">
+                              <input type="radio" class="custom-control-input" name="example-radios" value="option1" checked>
+                              <div class="custom-control-label">Saya Memiliki Google Developer ID</div>
+                            </label>
+                            <label class="custom-control custom-radio">
+                              <input type="radio" class="custom-control-input" name="example-radios" value="option2">
+                              <div class="custom-control-label">I will use COMPRO's Google Developer ID</div>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="form-label">App Store</div>
+                          <div class="custom-controls-stacked">
+                            <label class="custom-control custom-radio">
+                              <input type="radio" class="custom-control-input" name="example-inline-radios" value="option1" checked>
+                              <div class="custom-control-label">I also want to publish on App Store</div>
+                            </label>
+                            <label class="custom-control custom-radio">
+                              <input type="radio" class="custom-control-input" name="example-inline-radios" value="option2">
+                              <div class="custom-control-label">I do not want to publish on App Store</div>
                             </label>
                           </div>
                         </div>
                       </div>
-                      <h4>Pilihan Developer ID</h4>
-                      <div class="form-group">
-                        <div class="form-label">Play Store</div>
-                        <div class="custom-controls-stacked">
-                          <label class="custom-control custom-radio">
-                            <input type="radio" class="custom-control-input" name="example-radios" value="option1" checked>
-                            <div class="custom-control-label">Saya Memiliki Google Developer ID</div>
-                          </label>
-                          <label class="custom-control custom-radio">
-                            <input type="radio" class="custom-control-input" name="example-radios" value="option2">
-                            <div class="custom-control-label">I will use COMPRO's Google Developer ID</div>
-                          </label>
+                      <div class="col-xl-6">
+                        <div class="form-group">
+                          <textarea rows="5" class="form-control" placeholder="Short Description" value="Mike"></textarea>
                         </div>
-                      </div>
-                      <div class="form-group">
-                        <div class="form-label">App Store</div>
-                        <div class="custom-controls-stacked">
-                          <label class="custom-control custom-radio">
-                            <input type="radio" class="custom-control-input" name="example-inline-radios" value="option1" checked>
-                            <div class="custom-control-label">I also want to publish on App Store</div>
-                          </label>
-                          <label class="custom-control custom-radio">
-                            <input type="radio" class="custom-control-input" name="example-inline-radios" value="option2">
-                            <div class="custom-control-label">I do not want to publish on App Store</div>
-                          </label>
+                        <div class="form-group">
+                          <textarea rows="5" class="form-control" placeholder="Full Description" value="Mike"></textarea>
                         </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control form-url" placeholder="Url Website (Optional)" />
+                        </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control form-email" placeholder="Contact Email" />
+                        </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control form-phone" placeholder="Phone Number" />
+                        </div>
+                        <input type="submit" class="btn btn-primary" value="Submit" />
                       </div>
-                    </div>
-                    <div class="col-xl-6">
-                      <div class="form-group">
-                        <textarea rows="5" class="form-control" placeholder="Short Description" value="Mike"></textarea>
-                      </div>
-                      <div class="form-group">
-                        <textarea rows="5" class="form-control" placeholder="Full Description" value="Mike"></textarea>
-                      </div>
-                      <div class="form-group">
-                        <input type="text" class="form-control form-url" placeholder="Url Website (Optional)" />
-                      </div>
-                      <div class="form-group">
-                        <input type="text" class="form-control form-email" placeholder="Contact Email" />
-                      </div>
-                      <div class="form-group">
-                        <input type="text" class="form-control form-phone" placeholder="Phone Number" />
-                      </div>
-                      <input type="submit" class="btn btn-primary" value="Submit" />
                     </div>
                   </div>
                 </form>
@@ -190,6 +197,129 @@
             </div>
             <div role="tabpanel" class="tab-pane" id="step-2">
               <div class="design-process-content">
+                <div class="form-group">
+                  <div class="custom-controls-stacked">
+                    <div class="row">
+                      <div class="col-xl-4">
+                        <label class="custom-control custom-radio">
+                          <input type="radio" class="custom-control-input" name="example-inline-radios" value="option1" checked>
+                          <div class="custom-control-label">I also want to publish on App Store</div>
+                        </label>
+                      </div>
+                      <div class="col-xl-4">
+                        <label class="custom-control custom-radio">
+                          <input type="radio" class="custom-control-input" name="example-inline-radios" value="option2">
+                          <div class="custom-control-label">I do not want to publish on App Store</div>
+                        </label>
+                      </div>
+                      <div class="col-xl-4">
+                        <label class="custom-control custom-radio">
+                          <input type="radio" class="custom-control-input" name="example-inline-radios" value="option2">
+                          <div class="custom-control-label">I do not want to publish on App Store</div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="form-group">
+                  <div class="custom-controls-stacked">
+                    <div class="row">
+                      <div class="col-xl-6">
+                        <label class="custom-control custom-radio">
+                          <input type="radio" class="custom-control-input" name="example-radios" value="option1" checked>
+                          <div class="custom-control-label">I also want to publish on App Store</div>
+                        </label>
+                      </div>
+                      <div class="col-xl-6">
+                        <label class="custom-control custom-radio">
+                          <input type="radio" class="custom-control-input" name="example-radios" value="option2">
+                          <div class="custom-control-label">I do not want to publish on App Store</div>
+                        </label>
+                      </div>
+                      <div class="col-xl-6">
+                        <label class="custom-control custom-radio">
+                          <input type="radio" class="custom-control-input" name="example-radios" value="option2">
+                          <div class="custom-control-label">I do not want to publish on App Store</div>
+                        </label>
+                      </div>
+                      <div class="col-xl-6">
+                        <label class="custom-control custom-radio">
+                          <input type="radio" class="custom-control-input" name="example-radios" value="option2">
+                          <div class="custom-control-label">I do not want to publish on App Store</div>
+                        </label>
+                      </div>
+                      <div class="col-xl-6">
+                        <label class="custom-control custom-radio">
+                          <input type="radio" class="custom-control-input" name="example-radios" value="option2">
+                          <div class="custom-control-label">I do not want to publish on App Store</div>
+                        </label>
+                      </div>
+                      <div class="col-xl-6">
+                        <label class="custom-control custom-radio">
+                          <input type="radio" class="custom-control-input" name="example-radios" value="option2">
+                          <div class="custom-control-label">I do not want to publish on App Store</div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+
+                <div class="row">
+                  <div class="col-xl-6">
+                    <form action="">
+                      <div class="radio-section">
+                        <label class="radio-button">
+                          <input type="radio" name="plan" value="hobby">
+                          <span class="radio-check"><i class="fa fa-check-circle fa-lg check-icon"></i></span>
+                          <div class="radio-header radio-text">HOBBY</div>
+                          <div class="radio-body radio-text">1 GB</div>
+                          <div class="radio-option radio-text">$<strong>5</strong> / mo</div>
+                        </label>
+                        <label class="radio-button">
+                          <input type="radio" name="plan" value="growth">
+                          <span class="radio-check"><i class="fa fa-check-circle fa-lg check-icon"></i></span>
+                          <div class="radio-header radio-text">GROWTH</div>
+                          <div class="radio-body radio-text">5 GB</div>
+                          <div class="radio-option radio-text">$<strong>10</strong> / mo</div>
+                        </label>
+                        <label class="radio-button">
+                          <input type="radio" name="plan" value="business">
+                          <span class="radio-check"><i class="fa fa-check-circle fa-lg check-icon"></i></span>
+                          <div class="radio-header radio-text">BUSINESS</div>
+                          <div class="radio-body radio-text">10 GB</div>
+                          <div class="radio-option radio-text">$<strong>15</strong> / mo</div>
+                        </label>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-xl-6">
+                    <form action="">
+                      <div class="radio-section">
+                        <label class="radio-button">
+                          <input type="radio" name="plan" value="hobby">
+                          <span class="radio-check"><i class="fa fa-check-circle fa-lg check-icon"></i></span>
+                          <div class="radio-header radio-text">HOBBY</div>
+                          <div class="radio-body radio-text">1 GB</div>
+                          <div class="radio-option radio-text">$<strong>5</strong> / mo</div>
+                        </label>
+                        <label class="radio-button">
+                          <input type="radio" name="plan" value="growth">
+                          <span class="radio-check"><i class="fa fa-check-circle fa-lg check-icon"></i></span>
+                          <div class="radio-header radio-text">GROWTH</div>
+                          <div class="radio-body radio-text">5 GB</div>
+                          <div class="radio-option radio-text">$<strong>10</strong> / mo</div>
+                        </label>
+                        <label class="radio-button">
+                          <input type="radio" name="plan" value="business">
+                          <span class="radio-check"><i class="fa fa-check-circle fa-lg check-icon"></i></span>
+                          <div class="radio-header radio-text">BUSINESS</div>
+                          <div class="radio-body radio-text">10 GB</div>
+                          <div class="radio-option radio-text">$<strong>15</strong> / mo</div>
+                        </label>
+                      </div>
+                    </form>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -303,6 +433,23 @@ function initDropEffect(box){
     
   }
 }
+
+$(function() {
+  
+  $('input[name=plan]').on('change', function() {
+    let $this = $(this);
+    let $label = $this.parent('label');
+    
+    if(!($label.hasClass('label-checked'))) {
+      $('label').removeClass('label-checked');
+      $('label').find('.radio-check').hide();
+      $label.addClass('label-checked');
+      $label.find('.radio-check').show();
+    }
+     
+  });
+  
+});
 
   </script>
 </body>
