@@ -43,11 +43,67 @@
 
   <link rel="stylesheet" type="text/css" href="style.css">
 
-  <link rel="stylesheet" type="text/css" href="css/dashboard.css">
-<script>
- 
+  <!-- <link rel="stylesheet" type="text/css" href="css/dashboard.css"> -->
+<style type="text/css">
+.types{
+  display: flex;
+}
+.types .typeItem{
+  margin: 10px 10px;
+  width: -webkit-fill-available;
+    border: 1px solid #707070;
+  border-radius: 10px;
+}
+.types .typeItem input{
+  display: none;
+  position: absolute;
+  opacity: 0;
+}
+.types .typeItem div{
+  width: inherit;
+    height: 65px;
+  border: 3px solid white;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 0 0;
+  transition: .3s; 
+}
+.types .typeItem label{
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+box-sizing: border-box;
+    height: inherit;
+    font-family: arial;
+    width: inherit;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: start;
+  padding: 14px;
+}
+.types .typeItem label::before{
+ content: '';
+    width: 14px;
+    height: 14px;
+    background: transparent;
+    border-radius: 50%;
+    margin-right: 8px;
+    border: 3px solid rgba(0,0,0,0.3);
+}
 
-</script>
+.types .typeItem > input[type="radio"]:checked ~ div{
+  border-color: rgb(93, 120, 255);
+}
+.types .typeItem > input[type="radio"]:checked ~ div label::before{
+  background: rgb(93, 120, 255);
+}
+.types .typeItem > input[type="radio"]:checked ~ div label{
+  color: rgb(93, 120, 255);
+}
+</style>
 
 </head>
 
@@ -197,127 +253,108 @@
             </div>
             <div role="tabpanel" class="tab-pane" id="step-2">
               <div class="design-process-content">
-                <div class="form-group">
-                  <div class="custom-controls-stacked">
-                    <div class="row">
-                      <div class="col-xl-4">
-                        <label class="custom-control custom-radio">
-                          <input type="radio" class="custom-control-input" name="example-inline-radios" value="option1" checked>
-                          <div class="custom-control-label">I also want to publish on App Store</div>
-                        </label>
+                <div class="row mb-6">
+                  <div class="col-xl-4">
+                    <div class="types">
+                      <div class="typeItem">
+                        <input type="radio" checked="checked" id="type1" name="type">
+                        <div>
+                          <label for="type1">
+                            <p class="text-left"><b>Paket 1</b> <br>
+                              <small>IDR 1.000.000 / bln</small></p>
+                          </label>
+                        </div>
                       </div>
-                      <div class="col-xl-4">
-                        <label class="custom-control custom-radio">
-                          <input type="radio" class="custom-control-input" name="example-inline-radios" value="option2">
-                          <div class="custom-control-label">I do not want to publish on App Store</div>
-                        </label>
+                    </div>
+                  </div>
+                  <div class="col-xl-4">
+                    <div class="types">
+                      <div class="typeItem">
+                        <input type="radio" id="type2" name="type">
+                        <div>
+                          <label for="type2">
+                          <p class="text-left"><b>Paket 2</b> <br>
+                              <small>IDR 2.000.000 / bln</small></p>
+                          </label>
+                        </div>
                       </div>
-                      <div class="col-xl-4">
-                        <label class="custom-control custom-radio">
-                          <input type="radio" class="custom-control-input" name="example-inline-radios" value="option2">
-                          <div class="custom-control-label">I do not want to publish on App Store</div>
-                        </label>
+                    </div>
+                  </div>
+                  <div class="col-xl-4">
+                    <div class="types">
+                      <div class="typeItem">
+                        <input type="radio" id="type3" name="type">
+                        <div>
+                          <label for="type3">
+                            <p class="text-left"><b>Paket 3</b> <br>
+                              <small>IDR 3.000.000 / bln</small></p>
+                          </label>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <!-- <div class="form-group">
-                  <div class="custom-controls-stacked">
-                    <div class="row">
-                      <div class="col-xl-6">
-                        <label class="custom-control custom-radio">
-                          <input type="radio" class="custom-control-input" name="example-radios" value="option1" checked>
-                          <div class="custom-control-label">I also want to publish on App Store</div>
-                        </label>
-                      </div>
-                      <div class="col-xl-6">
-                        <label class="custom-control custom-radio">
-                          <input type="radio" class="custom-control-input" name="example-radios" value="option2">
-                          <div class="custom-control-label">I do not want to publish on App Store</div>
-                        </label>
-                      </div>
-                      <div class="col-xl-6">
-                        <label class="custom-control custom-radio">
-                          <input type="radio" class="custom-control-input" name="example-radios" value="option2">
-                          <div class="custom-control-label">I do not want to publish on App Store</div>
-                        </label>
-                      </div>
-                      <div class="col-xl-6">
-                        <label class="custom-control custom-radio">
-                          <input type="radio" class="custom-control-input" name="example-radios" value="option2">
-                          <div class="custom-control-label">I do not want to publish on App Store</div>
-                        </label>
-                      </div>
-                      <div class="col-xl-6">
-                        <label class="custom-control custom-radio">
-                          <input type="radio" class="custom-control-input" name="example-radios" value="option2">
-                          <div class="custom-control-label">I do not want to publish on App Store</div>
-                        </label>
-                      </div>
-                      <div class="col-xl-6">
-                        <label class="custom-control custom-radio">
-                          <input type="radio" class="custom-control-input" name="example-radios" value="option2">
-                          <div class="custom-control-label">I do not want to publish on App Store</div>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
 
                 <div class="row">
                   <div class="col-xl-6">
-                    <form action="">
-                      <div class="radio-section">
-                        <label class="radio-button">
-                          <input type="radio" name="plan" value="hobby">
-                          <span class="radio-check"><i class="fa fa-check-circle fa-lg check-icon"></i></span>
-                          <div class="radio-header radio-text">HOBBY</div>
-                          <div class="radio-body radio-text">1 GB</div>
-                          <div class="radio-option radio-text">$<strong>5</strong> / mo</div>
-                        </label>
-                        <label class="radio-button">
-                          <input type="radio" name="plan" value="growth">
-                          <span class="radio-check"><i class="fa fa-check-circle fa-lg check-icon"></i></span>
-                          <div class="radio-header radio-text">GROWTH</div>
-                          <div class="radio-body radio-text">5 GB</div>
-                          <div class="radio-option radio-text">$<strong>10</strong> / mo</div>
-                        </label>
-                        <label class="radio-button">
-                          <input type="radio" name="plan" value="business">
-                          <span class="radio-check"><i class="fa fa-check-circle fa-lg check-icon"></i></span>
-                          <div class="radio-header radio-text">BUSINESS</div>
-                          <div class="radio-body radio-text">10 GB</div>
-                          <div class="radio-option radio-text">$<strong>15</strong> / mo</div>
-                        </label>
+                    <div class="types">
+                      <div class="typeItem">
+                        <input type="radio" id="type4" name="bank">
+                        <div>
+                          <label for="type4">Bank BCA</label>
+                        </div>
                       </div>
-                    </form>
+                    </div>
                   </div>
                   <div class="col-xl-6">
-                    <form action="">
-                      <div class="radio-section">
-                        <label class="radio-button">
-                          <input type="radio" name="plan" value="hobby">
-                          <span class="radio-check"><i class="fa fa-check-circle fa-lg check-icon"></i></span>
-                          <div class="radio-header radio-text">HOBBY</div>
-                          <div class="radio-body radio-text">1 GB</div>
-                          <div class="radio-option radio-text">$<strong>5</strong> / mo</div>
-                        </label>
-                        <label class="radio-button">
-                          <input type="radio" name="plan" value="growth">
-                          <span class="radio-check"><i class="fa fa-check-circle fa-lg check-icon"></i></span>
-                          <div class="radio-header radio-text">GROWTH</div>
-                          <div class="radio-body radio-text">5 GB</div>
-                          <div class="radio-option radio-text">$<strong>10</strong> / mo</div>
-                        </label>
-                        <label class="radio-button">
-                          <input type="radio" name="plan" value="business">
-                          <span class="radio-check"><i class="fa fa-check-circle fa-lg check-icon"></i></span>
-                          <div class="radio-header radio-text">BUSINESS</div>
-                          <div class="radio-body radio-text">10 GB</div>
-                          <div class="radio-option radio-text">$<strong>15</strong> / mo</div>
-                        </label>
+                    <div class="types">
+                      <div class="typeItem">
+                        <input type="radio" id="type5" name="bank">
+                        <div>
+                          <label for="type5">Bank Mandiri</label>
+                        </div>
                       </div>
-                    </form>
+                    </div>
+                  </div>
+                  <div class="col-xl-6">
+                    <div class="types">
+                      <div class="typeItem">
+                        <input type="radio" id="type6" name="bank">
+                        <div>
+                          <label for="type6">Bank BRI</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-6">
+                    <div class="types">
+                      <div class="typeItem">
+                        <input type="radio" id="type7" name="bank">
+                        <div>
+                          <label for="type7">Bank BNI</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-6">
+                    <div class="types">
+                      <div class="typeItem">
+                        <input type="radio" id="type8" name="bank">
+                        <div>
+                          <label for="type8">Bank Niaga</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-6">
+                    <div class="types">
+                      <div class="typeItem">
+                        <input type="radio" id="type9" name="bank">
+                        <div>
+                          <label for="type9">Bank Mandiri Syariah</label>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
