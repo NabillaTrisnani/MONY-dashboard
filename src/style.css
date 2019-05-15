@@ -326,11 +326,6 @@ p {
   height: 381px;
 }
 
-.card {
-  border: none;
-  box-shadow: none;
-}
-
 .wrapper {
   display: flex;
 }
