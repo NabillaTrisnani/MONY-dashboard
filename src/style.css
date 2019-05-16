@@ -64,6 +64,8 @@ ul {
 
 .nav-tabs .nav-link {
   padding: 1rem;
+  background: transparent !important;
+  border: none;
 }
 
 .nav-tabs .nav-link:hover:not(.disabled) {
