@@ -134,16 +134,42 @@
               <input type="text" class="form-control" name="title" value="About Us" />
             </div>
             <div class="form-group">
-              <label class="form-label">Company<span class="form-required">*</span></label>
-              <input type="text" class="form-control" />
+              <div class="wrapper">
+                <div class="box">
+                  <div class="js--image-preview"></div>
+                  <div class="upload-options">
+                    <label>
+                      <input type="file" class="image-upload fe fe-menu" accept="image/*" />
+                    </label>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="form-group">
-              <label class="form-label">Email<span class="form-required">*</span></label>
-              <input type="email" class="form-control" />
+              <label class="form-label">Profile Name<span class="form-required">*</span></label>
+              <input type="text" class="form-control" name="profile-name" value="Compro"  />
             </div>
-            <div class="form-group mb-0">
-              <label class="form-label">Phone number</label>
-              <input type="tel" class="form-control" />
+            <div class="form-group">
+              <label class="form-label">Content <span class="form-required">*</span></label>
+              <textarea rows="5" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Action Button Name<span class="form-required">*</span></label>
+              <input type="text" class="form-control" placeholder="Button Name" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Target Page</label>
+              <select name="beast" id="select-beast" class="form-control custom-select">
+                <option value="1">Chuck Testa</option>
+                <option value="4">Sage Cattabriga-Alosa</option>
+                <option value="3">Nikola Tesla</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <a href="#" class="btn btn-primary" role="button">Add Action Button</a>
+            </div>
+            <div class="form-group text-right">
+              <a href="#" class="btn btn-primary" role="button">Save Changes</a>
             </div>
           </div>
 
@@ -298,6 +324,99 @@ function openSidebar(evt, cityName) {
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+
+
+
+  function initImageUpload(box) {
+  let uploadField = box.querySelector('.image-upload');
+
+  uploadField.addEventListener('change', getFile);
+
+  function getFile(e){
+    let file = e.currentTarget.files[0];
+    checkType(file);
+  }
+  
+  function previewImage(file){
+    let thumb = box.querySelector('.js--image-preview'),
+        reader = new FileReader();
+
+    reader.onload = function() {
+      thumb.style.backgroundImage = 'url(' + reader.result + ')';
+    }
+    reader.readAsDataURL(file);
+    thumb.className += ' js--no-default';
+  }
+
+  function checkType(file){
+    let imageType = /image.*/;
+    if (!file.type.match(imageType)) {
+      throw 'Datei ist kein Bild';
+    } else if (!file){
+      throw 'Kein Bild gewählt';
+    } else {
+      previewImage(file);
+    }
+  }
+  
+}
+
+// initialize box-scope
+var boxes = document.querySelectorAll('.box');
+
+for (let i = 0; i < boxes.length; i++) {
+  let box = boxes[i];
+  initDropEffect(box);
+  initImageUpload(box);
+}
+
+
+
+/// drop-effect
+function initDropEffect(box){
+  let area, drop, areaWidth, areaHeight, maxDistance, dropWidth, dropHeight, x, y;
+  
+  // get clickable area for drop effect
+  area = box.querySelector('.js--image-preview');
+  area.addEventListener('click', fireRipple);
+  
+  function fireRipple(e){
+    area = e.currentTarget
+    // create drop
+    if(!drop){
+      drop = document.createElement('span');
+      drop.className = 'drop';
+      this.appendChild(drop);
+    }
+    // reset animate class
+    drop.className = 'drop';
+    
+    // calculate dimensions of area (longest side)
+    areaWidth = getComputedStyle(this, null).getPropertyValue("width");
+    areaHeight = getComputedStyle(this, null).getPropertyValue("height");
+    maxDistance = Math.max(parseInt(areaWidth, 10), parseInt(areaHeight, 10));
+
+    // set drop dimensions to fill area
+    drop.style.width = maxDistance + 'px';
+    drop.style.height = maxDistance + 'px';
+    
+    // calculate dimensions of drop
+    dropWidth = getComputedStyle(this, null).getPropertyValue("width");
+    dropHeight = getComputedStyle(this, null).getPropertyValue("height");
+    
+    // calculate relative coordinates of click
+    // logic: click coordinates relative to page - parent's position relative to page - half of self height/width to make it controllable from the center
+    x = e.pageX - this.offsetLeft - (parseInt(dropWidth, 10)/2);
+    y = e.pageY - this.offsetTop - (parseInt(dropHeight, 10)/2) - 30;
+    
+    // position drop and animate
+    drop.style.top = y + 'px';
+    drop.style.left = x + 'px';
+    drop.className += ' animate';
+    e.stopPropagation();
+    
+  }
+}
   </script>
 </body>
 
